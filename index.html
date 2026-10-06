@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Agende seu corte de forma rápida e fácil.">
+
+    <title>Barbearia Garcia | Agendamento</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+<!-- =========================
+TELA INICIAL
+========================= -->
+
+<section class="screen screen-home active" id="homeScreen">
+
+    <header>
+
+       <div class="logo">
+    <img src="images/logo-barbearia.png" alt="Barbearia Garcia">
+        </div>
+        
+        <button class="btn-meus-horarios" id="btnMeusHorarios">
+    <i class="fa-regular fa-calendar"></i>
+    Meus horários
+</button>
+
+        <button class="btn-header" id="btnAgendarTopo">
+            Agendar
+        </button>
+
+    </header>
+
+
+    <div class="hero-app">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                BARBEARIA GARCIA
+            </span>
+
+            <h1>
+                Seu estilo começa
+                <strong>aqui.</strong>
+            </h1>
+
+            <p>
+                Escolha seu serviço,  Data e horário.
+                Agende seu atendimento em poucos minutos.
+            </p>
+
+            <button class="btn-primary" id="btnAgendar">
+
+                Agendar meu horário
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+TELA AGENDAMENTO
+========================= -->
+
+<section class="screen screen-booking" id="bookingScreen">
+
+    <div class="booking-header">
+
+        <button class="back-button" id="btnVoltar">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+
+        <div>
+
+            <small>Barbearia Garcia</small>
+
+            <h2>Agendamento</h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="booking-content">
+
+
+        <!-- ETAPA NOME -->
+
+        <div class="booking-screen active" id="stepNome">
+
+            <span class="step-number">
+                ETAPA 1
+            </span>
+
+            <h3>
+                Qual é o seu nome?
+            </h3>
+
+            <p>
+                Vamos começar seu agendamento.
+            </p>
+
+
+            <input
+                type="text"
+                id="nomeCliente"
+                placeholder="Digite seu nome"
+                autocomplete="name"
+            >
+
+
+            <button class="booking-button" id="btnNome">
+
+                Continuar
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ETAPA TELEFONE -->
+
+        <div class="booking-screen" id="stepTelefone">
+
+            <span class="step-number">
+                ETAPA 2
+            </span>
+
+            <h3>
+                Qual é o seu telefone?
+            </h3>
+
+            <p>
+                Informe seu número para contato.
+            </p>
+
+
+            <input
+                type="tel"
+                id="telefoneCliente"
+                placeholder="(00) 00000-0000"
+                autocomplete="tel"
+            >
+
+
+            <button class="booking-button" id="btnTelefone">
+
+                Continuar
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ETAPA EMAIL -->
+
+        <div class="booking-screen" id="stepEmail">
+
+            <span class="step-number">
+                ETAPA 3
+            </span>
+
+            <h3>
+                Qual é o seu e-mail?
+            </h3>
+
+            <p>
+                Digite seu melhor e-mail.
+            </p>
+
+
+            <input
+                type="email"
+                id="emailCliente"
+                placeholder="seuemail@email.com"
+                autocomplete="email"
+            >
+
+
+            <button class="booking-button" id="btnEmail">
+
+                Continuar
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ETAPA SERVIÇO -->
+
+        <div class="booking-screen" id="stepServico">
+
+            <span class="step-number">
+                ETAPA 4
+            </span>
+
+            <h3>
+                Escolha o serviço
+            </h3>
+
+            <p>
+                Arraste para o lado para ver as opções.
+            </p>
+
+
+            <div class="booking-services">
+
+
+                <button
+                    class="booking-service"
+                    data-servico="Corte Masculino"
+                    data-preco="35"
+                    data-duracao="50"
+                >
+
+                    <i class="fa-solid fa-scissors"></i>
+
+                    <h4>Corte Masculino</h4>
+
+                    <span>50 min</span>
+
+                    <strong>R$ 35</strong>
+
+                </button>
+
+
+                <button
+                    class="booking-service"
+                    data-servico="Barba"
+                    data-preco="25"
+                    data-duracao="30"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <h4>Barba</h4>
+
+                    <span>30 min</span>
+
+                    <strong>R$ 25</strong>
+
+                </button>
+
+
+                <button
+                    class="booking-service"
+                    data-servico="Corte + Barba"
+                    data-preco="55"
+                    data-duracao="60"
+                >
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h4>Corte + Barba</h4>
+
+                    <span>60 min</span>
+
+                    <strong>R$ 55</strong>
+
+                </button>
+<button
+    class="booking-service"
+    data-servico="Corte + Pigmentação"
+    data-preco="70"
+    data-duracao="60"
+>
+
+    <i class="fa-solid fa-paintbrush"></i>
+
+    <h4>Corte + Pigmentação</h4>
+
+    <span>50 min</span>
+
+    <strong>R$ 70</strong>
+
+</button>
+
+
+<button
+    class="booking-service"
+    data-servico="Platinado"
+    data-preco="120"
+    data-duracao="120"
+>
+
+    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+    <h4>Corte + Platinado</h4>
+
+    <span>2 horas</span>
+
+    <strong>R$ 120</strong>
+
+</button>
+
+
+<button
+    class="booking-service"
+    data-servico="Luzes"
+    data-preco="110"
+    data-duracao="110"
+>
+
+    <i class="fa-solid fa-sun"></i>
+
+    <h4>Corte + Luzes</h4>
+
+    <span>1h 30min</span>
+
+    <strong>R$ 110</strong>
+
+</button>
+
+            </div>
+
+
+            <button
+                class="booking-button"
+                id="btnServico"
+                disabled
+            >
+
+                Continuar
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+        <!-- =========================
+ETAPA DATA
+========================= -->
+
+<div class="booking-screen" id="stepData">
+
+    <span class="step-number">
+        ETAPA 5
+    </span>
+
+    <h3>
+        Escolha a data
+    </h3>
+
+    <p>
+        Em qual dia você deseja seu atendimento?
+    </p>
+
+   <div class="lista-datas" id="listaDatas">
+    <!-- As datas serão criadas automaticamente pelo JavaScript -->
+</div>
+
+    <button
+        class="booking-button"
+        id="btnData"
+        disabled
+    >
+        Continuar
+
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+</div>
+
+<!-- =========================
+ETAPA HORÁRIO
+========================= -->
+
+<div class="booking-screen" id="stepHorario">
+
+    <span class="step-number">
+        ETAPA 6
+    </span>
+
+    <h3>
+        Escolha o horário
+    </h3>
+
+    <p>
+        Selecione um horário disponível.
+    </p>
+
+    <div class="horarios" id="listaHorarios">
+        <!-- Os horários serão colocados aqui pelo JavaScript -->
+    </div>
+    
+   <button
+    class="booking-button"
+    id="btnConfirmar"
+    disabled
+>
+    Confirmar agendamento
+
+    <i class="fa-solid fa-check"></i>
+</button>
+
+</div>
+ <div class="booking-screen" id="stepSucesso">
+
+    <div class="sucesso-icone">
+        <i class="fa-solid fa-check"></i>
+    </div>
+
+    <h3>Agendamento realizado com sucesso!</h3>
+
+    <p>Seu horário foi reservado.</p>
+
+</div>
+
+    </div>
+
+</section> 
+
+<!-- =====================================
+     MEUS HORÁRIOS
+===================================== -->
+
+<section class="screen screen-meus-horarios" id="meusHorariosScreen">
+
+    <div class="booking-header">
+
+        <button class="back-button" id="btnVoltarMeusHorarios">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <div>
+            <small>Barbearia Garcia</small>
+            <h2>Meus horários</h2>
+        </div>
+
+    </div>
+
+
+    <div class="meus-horarios-content">
+
+        <div class="meus-horarios-titulo">
+
+            <span>SEUS AGENDAMENTOS</span>
+
+            <h3>Próximos horários</h3>
+
+            <p>
+                Consulte seus horários agendados e cancele caso necessário.
+            </p>
+
+        </div>
+
+
+        <div class="lista-meus-horarios" id="listaMeusHorarios">
+
+            <p class="sem-agendamentos">
+                Você ainda não possui horários agendados.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+ 
+<!-- MODAL CANCELAR AGENDAMENTO -->
+<div class="modal-cancelamento" id="modalCancelamento">
+
+    <div class="modal-cancelamento-box">
+
+        <div class="modal-cancelamento-icon">
+            <i class="fa-solid fa-calendar-xmark"></i>
+        </div>
+
+        <h3>Cancelar agendamento?</h3>
+
+        <p id="textoCancelamento">
+            Tem certeza que deseja cancelar este agendamento?
+        </p>
+
+        <div class="modal-cancelamento-botoes">
+
+            <button
+                type="button"
+                id="btnVoltarCancelamento"
+                class="btn-voltar-cancelamento"
+            >
+                Voltar
+            </button>
+
+            <button
+                type="button"
+                id="btnConfirmarCancelamento"
+                class="btn-confirmar-cancelamento"
+            >
+                Sim, cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
